@@ -1,0 +1,32 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+    @responsive {
+        .chamfer-wrapper {
+            @apply relative h-32;
+        }
+
+        .chamfer {
+            @apply w-full h-full absolute top-0 left-0 z-10;
+            clip-path: polygon(0% 0%, 100% 0%, 28% 100%);
+        }
+
+        .chamfer-bg {
+            @apply absolute w-full h-full top-0 left-0 z-0;
+        }
+    }
+}
+
+:root {
+    --color-bg-primary: #4FD1C5;
+    --color-bg-secondary: #6A79FC;
+    --color-bg-white: #fff;
+
+    --color-text-primary: #234E52;
+    --color-text-secondary: #31156B;
+    --color-text-white: #fff;
+}
