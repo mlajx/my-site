@@ -414,7 +414,7 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -614,6 +614,27 @@ video {
   .container {
     max-width: 1280px;
   }
+}
+
+.section {
+  min-height: 15rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.question-mark {
+  right: -1.5rem;
+  top: -0.6rem;
+  position: absolute;
+  background-color: var(--color-bg-white);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
@@ -1265,6 +1286,14 @@ video {
   background-color: var(--color-bg-secondary);
 }
 
+.bg-my-experience {
+  background-color: var(--color-bg-my-experience);
+}
+
+.bg-card {
+  background-color: var(--color-bg-card);
+}
+
 .bg-white {
   background-color: var(--color-bg-white);
 }
@@ -1277,6 +1306,14 @@ video {
   background-color: var(--color-bg-secondary);
 }
 
+.hover\:bg-my-experience:hover {
+  background-color: var(--color-bg-my-experience);
+}
+
+.hover\:bg-card:hover {
+  background-color: var(--color-bg-card);
+}
+
 .hover\:bg-white:hover {
   background-color: var(--color-bg-white);
 }
@@ -1287,6 +1324,14 @@ video {
 
 .focus\:bg-secondary:focus {
   background-color: var(--color-bg-secondary);
+}
+
+.focus\:bg-my-experience:focus {
+  background-color: var(--color-bg-my-experience);
+}
+
+.focus\:bg-card:focus {
+  background-color: var(--color-bg-card);
 }
 
 .focus\:bg-white:focus {
@@ -2352,7 +2397,7 @@ video {
 }
 
 .font-sans {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
@@ -2827,6 +2872,14 @@ video {
   margin: -1px;
 }
 
+.m-1\.5 {
+  margin: 0.375rem;
+}
+
+.-m-1\.5 {
+  margin: -0.375rem;
+}
+
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -3205,6 +3258,26 @@ video {
 .-mx-px {
   margin-left: -1px;
   margin-right: -1px;
+}
+
+.my-1\.5 {
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+
+.mx-1\.5 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+}
+
+.-my-1\.5 {
+  margin-top: -0.375rem;
+  margin-bottom: -0.375rem;
+}
+
+.-mx-1\.5 {
+  margin-left: -0.375rem;
+  margin-right: -0.375rem;
 }
 
 .mt-0 {
@@ -3813,6 +3886,38 @@ video {
 
 .-ml-px {
   margin-left: -1px;
+}
+
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
+.mr-1\.5 {
+  margin-right: 0.375rem;
+}
+
+.mb-1\.5 {
+  margin-bottom: 0.375rem;
+}
+
+.ml-1\.5 {
+  margin-left: 0.375rem;
+}
+
+.-mt-1\.5 {
+  margin-top: -0.375rem;
+}
+
+.-mr-1\.5 {
+  margin-right: -0.375rem;
+}
+
+.-mb-1\.5 {
+  margin-bottom: -0.375rem;
+}
+
+.-ml-1\.5 {
+  margin-left: -0.375rem;
 }
 
 .max-h-full {
@@ -5113,6 +5218,24 @@ video {
   color: var(--color-text-secondary);
 }
 
+.text-name {
+  color: var(--color-text-name);
+}
+
+.text-title {
+  color: var(--color-text-title);
+}
+
+.text-content {
+  color: var(--color-text-content);
+}
+
+.text-timeline-date {
+  --text-opacity: 1;
+  color: #969696;
+  color: rgba(150, 150, 150, var(--text-opacity));
+}
+
 .text-white {
   color: var(--color-text-white);
 }
@@ -5125,6 +5248,24 @@ video {
   color: var(--color-text-secondary);
 }
 
+.hover\:text-name:hover {
+  color: var(--color-text-name);
+}
+
+.hover\:text-title:hover {
+  color: var(--color-text-title);
+}
+
+.hover\:text-content:hover {
+  color: var(--color-text-content);
+}
+
+.hover\:text-timeline-date:hover {
+  --text-opacity: 1;
+  color: #969696;
+  color: rgba(150, 150, 150, var(--text-opacity));
+}
+
 .hover\:text-white:hover {
   color: var(--color-text-white);
 }
@@ -5135,6 +5276,24 @@ video {
 
 .focus\:text-secondary:focus {
   color: var(--color-text-secondary);
+}
+
+.focus\:text-name:focus {
+  color: var(--color-text-name);
+}
+
+.focus\:text-title:focus {
+  color: var(--color-text-title);
+}
+
+.focus\:text-content:focus {
+  color: var(--color-text-content);
+}
+
+.focus\:text-timeline-date:focus {
+  --text-opacity: 1;
+  color: #969696;
+  color: rgba(150, 150, 150, var(--text-opacity));
 }
 
 .focus\:text-white:focus {
@@ -8216,13 +8375,48 @@ video {
   z-index: 0;
 }
 
+@font-face {
+  font-family: "Montserrat";
+
+  src: url(/fonts/Montserrat-Bold.woff2?1eaf59537a9c317acaa4b2c144cd89d6) format("woff2"),
+        url(/fonts/Montserrat-Bold.woff?137a9f5f920bcccad63c115397dc1532) format("woff");
+
+  font-weight: bold;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+
+  src: url(/fonts/Montserrat-Regular.woff2?6c8807219b0ecffdf96122b80df3e62c) format("woff2"),
+        url(/fonts/Montserrat-Regular.woff?c0b8804ae85213c9194816da945db150) format("woff");
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --color-bg-primary: #4FD1C5;
-  --color-bg-secondary: #6A79FC;
+  --color-bg-primary: #4fd1c5;
+  --color-bg-secondary: #6a79fc;
   --color-bg-white: #fff;
-  --color-text-primary: #234E52;
-  --color-text-secondary: #31156B;
+  --color-bg-card: #fff;
+  --color-bg-my-experience: #585858;
+  --color-text-primary: #234e52;
+  --color-text-secondary: #31156b;
   --color-text-white: #fff;
+  --color-text-name: #fff;
+  --color-text-title: #000;
+  --color-text-content: #000;
 }
 
 @media (min-width: 640px) {
@@ -8905,6 +9099,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .sm\:bg-my-experience {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .sm\:bg-card {
+    background-color: var(--color-bg-card);
+  }
+
   .sm\:bg-white {
     background-color: var(--color-bg-white);
   }
@@ -8917,6 +9119,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .sm\:hover\:bg-my-experience:hover {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .sm\:hover\:bg-card:hover {
+    background-color: var(--color-bg-card);
+  }
+
   .sm\:hover\:bg-white:hover {
     background-color: var(--color-bg-white);
   }
@@ -8927,6 +9137,14 @@ video {
 
   .sm\:focus\:bg-secondary:focus {
     background-color: var(--color-bg-secondary);
+  }
+
+  .sm\:focus\:bg-my-experience:focus {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .sm\:focus\:bg-card:focus {
+    background-color: var(--color-bg-card);
   }
 
   .sm\:focus\:bg-white:focus {
@@ -9992,7 +10210,7 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
@@ -10467,6 +10685,14 @@ video {
     margin: -1px;
   }
 
+  .sm\:m-1\.5 {
+    margin: 0.375rem;
+  }
+
+  .sm\:-m-1\.5 {
+    margin: -0.375rem;
+  }
+
   .sm\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -10845,6 +11071,26 @@ video {
   .sm\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .sm\:my-1\.5 {
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .sm\:mx-1\.5 {
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+  }
+
+  .sm\:-my-1\.5 {
+    margin-top: -0.375rem;
+    margin-bottom: -0.375rem;
+  }
+
+  .sm\:-mx-1\.5 {
+    margin-left: -0.375rem;
+    margin-right: -0.375rem;
   }
 
   .sm\:mt-0 {
@@ -11453,6 +11699,38 @@ video {
 
   .sm\:-ml-px {
     margin-left: -1px;
+  }
+
+  .sm\:mt-1\.5 {
+    margin-top: 0.375rem;
+  }
+
+  .sm\:mr-1\.5 {
+    margin-right: 0.375rem;
+  }
+
+  .sm\:mb-1\.5 {
+    margin-bottom: 0.375rem;
+  }
+
+  .sm\:ml-1\.5 {
+    margin-left: 0.375rem;
+  }
+
+  .sm\:-mt-1\.5 {
+    margin-top: -0.375rem;
+  }
+
+  .sm\:-mr-1\.5 {
+    margin-right: -0.375rem;
+  }
+
+  .sm\:-mb-1\.5 {
+    margin-bottom: -0.375rem;
+  }
+
+  .sm\:-ml-1\.5 {
+    margin-left: -0.375rem;
   }
 
   .sm\:max-h-full {
@@ -12753,6 +13031,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .sm\:text-name {
+    color: var(--color-text-name);
+  }
+
+  .sm\:text-title {
+    color: var(--color-text-title);
+  }
+
+  .sm\:text-content {
+    color: var(--color-text-content);
+  }
+
+  .sm\:text-timeline-date {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .sm\:text-white {
     color: var(--color-text-white);
   }
@@ -12765,6 +13061,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .sm\:hover\:text-name:hover {
+    color: var(--color-text-name);
+  }
+
+  .sm\:hover\:text-title:hover {
+    color: var(--color-text-title);
+  }
+
+  .sm\:hover\:text-content:hover {
+    color: var(--color-text-content);
+  }
+
+  .sm\:hover\:text-timeline-date:hover {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .sm\:hover\:text-white:hover {
     color: var(--color-text-white);
   }
@@ -12775,6 +13089,24 @@ video {
 
   .sm\:focus\:text-secondary:focus {
     color: var(--color-text-secondary);
+  }
+
+  .sm\:focus\:text-name:focus {
+    color: var(--color-text-name);
+  }
+
+  .sm\:focus\:text-title:focus {
+    color: var(--color-text-title);
+  }
+
+  .sm\:focus\:text-content:focus {
+    color: var(--color-text-content);
+  }
+
+  .sm\:focus\:text-timeline-date:focus {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
   }
 
   .sm\:focus\:text-white:focus {
@@ -16471,6 +16803,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .md\:bg-my-experience {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .md\:bg-card {
+    background-color: var(--color-bg-card);
+  }
+
   .md\:bg-white {
     background-color: var(--color-bg-white);
   }
@@ -16483,6 +16823,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .md\:hover\:bg-my-experience:hover {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .md\:hover\:bg-card:hover {
+    background-color: var(--color-bg-card);
+  }
+
   .md\:hover\:bg-white:hover {
     background-color: var(--color-bg-white);
   }
@@ -16493,6 +16841,14 @@ video {
 
   .md\:focus\:bg-secondary:focus {
     background-color: var(--color-bg-secondary);
+  }
+
+  .md\:focus\:bg-my-experience:focus {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .md\:focus\:bg-card:focus {
+    background-color: var(--color-bg-card);
   }
 
   .md\:focus\:bg-white:focus {
@@ -17558,7 +17914,7 @@ video {
   }
 
   .md\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
@@ -18033,6 +18389,14 @@ video {
     margin: -1px;
   }
 
+  .md\:m-1\.5 {
+    margin: 0.375rem;
+  }
+
+  .md\:-m-1\.5 {
+    margin: -0.375rem;
+  }
+
   .md\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -18411,6 +18775,26 @@ video {
   .md\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .md\:my-1\.5 {
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .md\:mx-1\.5 {
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+  }
+
+  .md\:-my-1\.5 {
+    margin-top: -0.375rem;
+    margin-bottom: -0.375rem;
+  }
+
+  .md\:-mx-1\.5 {
+    margin-left: -0.375rem;
+    margin-right: -0.375rem;
   }
 
   .md\:mt-0 {
@@ -19019,6 +19403,38 @@ video {
 
   .md\:-ml-px {
     margin-left: -1px;
+  }
+
+  .md\:mt-1\.5 {
+    margin-top: 0.375rem;
+  }
+
+  .md\:mr-1\.5 {
+    margin-right: 0.375rem;
+  }
+
+  .md\:mb-1\.5 {
+    margin-bottom: 0.375rem;
+  }
+
+  .md\:ml-1\.5 {
+    margin-left: 0.375rem;
+  }
+
+  .md\:-mt-1\.5 {
+    margin-top: -0.375rem;
+  }
+
+  .md\:-mr-1\.5 {
+    margin-right: -0.375rem;
+  }
+
+  .md\:-mb-1\.5 {
+    margin-bottom: -0.375rem;
+  }
+
+  .md\:-ml-1\.5 {
+    margin-left: -0.375rem;
   }
 
   .md\:max-h-full {
@@ -20319,6 +20735,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .md\:text-name {
+    color: var(--color-text-name);
+  }
+
+  .md\:text-title {
+    color: var(--color-text-title);
+  }
+
+  .md\:text-content {
+    color: var(--color-text-content);
+  }
+
+  .md\:text-timeline-date {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .md\:text-white {
     color: var(--color-text-white);
   }
@@ -20331,6 +20765,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .md\:hover\:text-name:hover {
+    color: var(--color-text-name);
+  }
+
+  .md\:hover\:text-title:hover {
+    color: var(--color-text-title);
+  }
+
+  .md\:hover\:text-content:hover {
+    color: var(--color-text-content);
+  }
+
+  .md\:hover\:text-timeline-date:hover {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .md\:hover\:text-white:hover {
     color: var(--color-text-white);
   }
@@ -20341,6 +20793,24 @@ video {
 
   .md\:focus\:text-secondary:focus {
     color: var(--color-text-secondary);
+  }
+
+  .md\:focus\:text-name:focus {
+    color: var(--color-text-name);
+  }
+
+  .md\:focus\:text-title:focus {
+    color: var(--color-text-title);
+  }
+
+  .md\:focus\:text-content:focus {
+    color: var(--color-text-content);
+  }
+
+  .md\:focus\:text-timeline-date:focus {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
   }
 
   .md\:focus\:text-white:focus {
@@ -24037,6 +24507,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .lg\:bg-my-experience {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .lg\:bg-card {
+    background-color: var(--color-bg-card);
+  }
+
   .lg\:bg-white {
     background-color: var(--color-bg-white);
   }
@@ -24049,6 +24527,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .lg\:hover\:bg-my-experience:hover {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .lg\:hover\:bg-card:hover {
+    background-color: var(--color-bg-card);
+  }
+
   .lg\:hover\:bg-white:hover {
     background-color: var(--color-bg-white);
   }
@@ -24059,6 +24545,14 @@ video {
 
   .lg\:focus\:bg-secondary:focus {
     background-color: var(--color-bg-secondary);
+  }
+
+  .lg\:focus\:bg-my-experience:focus {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .lg\:focus\:bg-card:focus {
+    background-color: var(--color-bg-card);
   }
 
   .lg\:focus\:bg-white:focus {
@@ -25124,7 +25618,7 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
@@ -25599,6 +26093,14 @@ video {
     margin: -1px;
   }
 
+  .lg\:m-1\.5 {
+    margin: 0.375rem;
+  }
+
+  .lg\:-m-1\.5 {
+    margin: -0.375rem;
+  }
+
   .lg\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -25977,6 +26479,26 @@ video {
   .lg\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .lg\:my-1\.5 {
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .lg\:mx-1\.5 {
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+  }
+
+  .lg\:-my-1\.5 {
+    margin-top: -0.375rem;
+    margin-bottom: -0.375rem;
+  }
+
+  .lg\:-mx-1\.5 {
+    margin-left: -0.375rem;
+    margin-right: -0.375rem;
   }
 
   .lg\:mt-0 {
@@ -26585,6 +27107,38 @@ video {
 
   .lg\:-ml-px {
     margin-left: -1px;
+  }
+
+  .lg\:mt-1\.5 {
+    margin-top: 0.375rem;
+  }
+
+  .lg\:mr-1\.5 {
+    margin-right: 0.375rem;
+  }
+
+  .lg\:mb-1\.5 {
+    margin-bottom: 0.375rem;
+  }
+
+  .lg\:ml-1\.5 {
+    margin-left: 0.375rem;
+  }
+
+  .lg\:-mt-1\.5 {
+    margin-top: -0.375rem;
+  }
+
+  .lg\:-mr-1\.5 {
+    margin-right: -0.375rem;
+  }
+
+  .lg\:-mb-1\.5 {
+    margin-bottom: -0.375rem;
+  }
+
+  .lg\:-ml-1\.5 {
+    margin-left: -0.375rem;
   }
 
   .lg\:max-h-full {
@@ -27885,6 +28439,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .lg\:text-name {
+    color: var(--color-text-name);
+  }
+
+  .lg\:text-title {
+    color: var(--color-text-title);
+  }
+
+  .lg\:text-content {
+    color: var(--color-text-content);
+  }
+
+  .lg\:text-timeline-date {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .lg\:text-white {
     color: var(--color-text-white);
   }
@@ -27897,6 +28469,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .lg\:hover\:text-name:hover {
+    color: var(--color-text-name);
+  }
+
+  .lg\:hover\:text-title:hover {
+    color: var(--color-text-title);
+  }
+
+  .lg\:hover\:text-content:hover {
+    color: var(--color-text-content);
+  }
+
+  .lg\:hover\:text-timeline-date:hover {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .lg\:hover\:text-white:hover {
     color: var(--color-text-white);
   }
@@ -27907,6 +28497,24 @@ video {
 
   .lg\:focus\:text-secondary:focus {
     color: var(--color-text-secondary);
+  }
+
+  .lg\:focus\:text-name:focus {
+    color: var(--color-text-name);
+  }
+
+  .lg\:focus\:text-title:focus {
+    color: var(--color-text-title);
+  }
+
+  .lg\:focus\:text-content:focus {
+    color: var(--color-text-content);
+  }
+
+  .lg\:focus\:text-timeline-date:focus {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
   }
 
   .lg\:focus\:text-white:focus {
@@ -31603,6 +32211,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .xl\:bg-my-experience {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .xl\:bg-card {
+    background-color: var(--color-bg-card);
+  }
+
   .xl\:bg-white {
     background-color: var(--color-bg-white);
   }
@@ -31615,6 +32231,14 @@ video {
     background-color: var(--color-bg-secondary);
   }
 
+  .xl\:hover\:bg-my-experience:hover {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .xl\:hover\:bg-card:hover {
+    background-color: var(--color-bg-card);
+  }
+
   .xl\:hover\:bg-white:hover {
     background-color: var(--color-bg-white);
   }
@@ -31625,6 +32249,14 @@ video {
 
   .xl\:focus\:bg-secondary:focus {
     background-color: var(--color-bg-secondary);
+  }
+
+  .xl\:focus\:bg-my-experience:focus {
+    background-color: var(--color-bg-my-experience);
+  }
+
+  .xl\:focus\:bg-card:focus {
+    background-color: var(--color-bg-card);
   }
 
   .xl\:focus\:bg-white:focus {
@@ -32690,7 +33322,7 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {
@@ -33165,6 +33797,14 @@ video {
     margin: -1px;
   }
 
+  .xl\:m-1\.5 {
+    margin: 0.375rem;
+  }
+
+  .xl\:-m-1\.5 {
+    margin: -0.375rem;
+  }
+
   .xl\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -33543,6 +34183,26 @@ video {
   .xl\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .xl\:my-1\.5 {
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .xl\:mx-1\.5 {
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+  }
+
+  .xl\:-my-1\.5 {
+    margin-top: -0.375rem;
+    margin-bottom: -0.375rem;
+  }
+
+  .xl\:-mx-1\.5 {
+    margin-left: -0.375rem;
+    margin-right: -0.375rem;
   }
 
   .xl\:mt-0 {
@@ -34151,6 +34811,38 @@ video {
 
   .xl\:-ml-px {
     margin-left: -1px;
+  }
+
+  .xl\:mt-1\.5 {
+    margin-top: 0.375rem;
+  }
+
+  .xl\:mr-1\.5 {
+    margin-right: 0.375rem;
+  }
+
+  .xl\:mb-1\.5 {
+    margin-bottom: 0.375rem;
+  }
+
+  .xl\:ml-1\.5 {
+    margin-left: 0.375rem;
+  }
+
+  .xl\:-mt-1\.5 {
+    margin-top: -0.375rem;
+  }
+
+  .xl\:-mr-1\.5 {
+    margin-right: -0.375rem;
+  }
+
+  .xl\:-mb-1\.5 {
+    margin-bottom: -0.375rem;
+  }
+
+  .xl\:-ml-1\.5 {
+    margin-left: -0.375rem;
   }
 
   .xl\:max-h-full {
@@ -35451,6 +36143,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .xl\:text-name {
+    color: var(--color-text-name);
+  }
+
+  .xl\:text-title {
+    color: var(--color-text-title);
+  }
+
+  .xl\:text-content {
+    color: var(--color-text-content);
+  }
+
+  .xl\:text-timeline-date {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .xl\:text-white {
     color: var(--color-text-white);
   }
@@ -35463,6 +36173,24 @@ video {
     color: var(--color-text-secondary);
   }
 
+  .xl\:hover\:text-name:hover {
+    color: var(--color-text-name);
+  }
+
+  .xl\:hover\:text-title:hover {
+    color: var(--color-text-title);
+  }
+
+  .xl\:hover\:text-content:hover {
+    color: var(--color-text-content);
+  }
+
+  .xl\:hover\:text-timeline-date:hover {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
+  }
+
   .xl\:hover\:text-white:hover {
     color: var(--color-text-white);
   }
@@ -35473,6 +36201,24 @@ video {
 
   .xl\:focus\:text-secondary:focus {
     color: var(--color-text-secondary);
+  }
+
+  .xl\:focus\:text-name:focus {
+    color: var(--color-text-name);
+  }
+
+  .xl\:focus\:text-title:focus {
+    color: var(--color-text-title);
+  }
+
+  .xl\:focus\:text-content:focus {
+    color: var(--color-text-content);
+  }
+
+  .xl\:focus\:text-timeline-date:focus {
+    --text-opacity: 1;
+    color: #969696;
+    color: rgba(150, 150, 150, var(--text-opacity));
   }
 
   .xl\:focus\:text-white:focus {

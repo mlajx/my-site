@@ -4,6 +4,19 @@
 
 @tailwind utilities;
 
+@layer components {
+    .section {
+        min-height: 15rem;
+        @apply py-16;
+    }
+
+    .question-mark {
+        right: -1.5rem;
+        top: -0.6rem;
+        @apply absolute bg-white w-8 h-8 rounded-full text-2xl font-bold flex justify-center items-center;
+    }
+}
+
 @layer utilities {
     @responsive {
         .chamfer-wrapper {
@@ -21,12 +34,39 @@
     }
 }
 
-:root {
-    --color-bg-primary: #4FD1C5;
-    --color-bg-secondary: #6A79FC;
-    --color-bg-white: #fff;
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
-    --color-text-primary: #234E52;
-    --color-text-secondary: #31156B;
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-bg-primary: #4fd1c5;
+    --color-bg-secondary: #6a79fc;
+    --color-bg-white: #fff;
+    --color-bg-card: #fff;
+    --color-bg-my-experience: #585858;
+
+    --color-text-primary: #234e52;
+    --color-text-secondary: #31156b;
     --color-text-white: #fff;
+    --color-text-name: #fff;
+    --color-text-title: #000;
+    --color-text-content: #000;
 }
