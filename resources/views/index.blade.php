@@ -69,6 +69,32 @@
         </div>
     </section>
 
+    <section class="section bg-white">
+        <div class="container text-secondary-light">
+            <x-title class="">Alguns projetos que fiz por diversão:</x-title>
+            <ul class="project-list">
+                <li class="project-item">
+                    <div class="flex flex-col">
+                        <div class="relative">
+                            <a href="#" class="text-xl font-bold block relative">Encontrando os 3 palindrômos</a>
+                                <div class="project-popup">
+                                    <p class="project-popup-text">
+                                        Um algorítmo desenvolvido em JS que encontra 3 número
+                                        palindromos que o resultado deles somados é o
+                                        número inserido pelo usuário.
+                                        Isso vale para números de base 5 até 36.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="underline h-1 w-0 bg-gradient-to-r from-white to-underline"></div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
     <section class="section bg-my-experience">
         <div class="container">
             <x-title class="text-center text-white">Minha Experiência até Hoje</x-title>
