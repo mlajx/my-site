@@ -107,6 +107,8 @@ html {
     --color-bg-card: #fff;
     --color-bg-my-experience: #585858;
     --color-bg-popup: #e9e9e9;
+    --color-bg-social: #1c1c1c;
+    --color-bg-footer: #1c1c1c;
 
     --color-text-primary: #234e52;
     --color-text-secondary: #31156b;
@@ -116,4 +118,9 @@ html {
     --color-text-title: #000;
     --color-text-content: #000;
     --color-text-popup: #4f4f4f;
+    --color-text-footer: #4f4f4f;
 }
+
+#particles-js {
+    @apply w-full h-full absolute top-0 left-0;
+  }

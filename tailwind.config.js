@@ -20,7 +20,8 @@ module.exports = {
             content: 'var(--color-text-content)',
             'timeline-date': '#969696',
             white: 'var(--color-text-white)',
-            popup: 'var(--color-text-popup)'
+            popup: 'var(--color-text-popup)',
+            footer: 'var(--color-text-footer)'
         },
         backgroundColor: {
             primary: 'var(--color-bg-primary)',
@@ -28,11 +29,14 @@ module.exports = {
             'my-experience': 'var(--color-bg-my-experience)',
             card: 'var(--color-bg-card)',
             white: 'var(--color-bg-white)',
-            popup: 'var(--color-bg-popup)'
+            popup: 'var(--color-bg-popup)',
+            social: 'var(--color-bg-social)',
+            footer: 'var(--color-bg-footer)'
         },
         extend: {
             container: {
-                center: true
+                center: true,
+                padding: '2rem',
             },
             fontFamily: {
                 sans: [
