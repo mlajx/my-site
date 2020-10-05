@@ -28,7 +28,11 @@
     .project-popup {
         top: -.6rem;
         right: -17rem;
-        @apply absolute w-64 bg-popup text-popup p-3 rounded text-justify;
+        @apply hidden w-64 bg-popup text-popup p-3 rounded text-justify;
+
+        @screen md {
+            @apply absolute;
+        }
     }
 
     .project-popup::before {
@@ -121,6 +125,6 @@ html {
     --color-text-footer: #4f4f4f;
 }
 
-#particles-js {
-    @apply w-full h-full absolute top-0 left-0;
-  }
+#tsparticles {
+    @apply w-full h-full absolute top-0 left-0 z-0;
+}

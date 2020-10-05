@@ -1,112 +1,278 @@
-require('particles.js')
+import { tsParticles } from "tsparticles";
 
-particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 380,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
+
+tsParticles.load("tsparticles", {
+    "background": {
       "color": {
-        "value": "#ffffff"
+        "value": ""
       },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
+      "image": "",
+      "position": "",
+      "repeat": "",
+      "size": "",
+      "opacity": 1
+    },
+    "backgroundMask": {
+      "cover": {
+        "color": {
+          "value": "#fff"
         },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
+        "opacity": 1
       },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
+      "enable": false
+    },
+    "detectRetina": true,
+    "fpsLimit": 30,
+    "infection": {
+      "cure": false,
+      "delay": 0,
+      "enable": false,
+      "infections": 0,
+      "stages": []
     },
     "interactivity": {
-      "detect_on": "canvas",
+      "detectsOn": "canvas",
       "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
+        "onClick": {
+          "enable": false,
+          "mode": "repulse"
         },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
+        "onDiv": {
+          "ids": [],
+          "enable": false,
+          "mode": [],
+          "type": "circle"
+        },
+        "onHover": {
+          "enable": false,
+          "mode": "bubble",
+          "parallax": {
+            "enable": false,
+            "force": 2,
+            "smooth": 10
+          }
         },
         "resize": true
       },
       "modes": {
+        "attract": {
+          "distance": 200,
+          "duration": 0.4,
+          "speed": 1
+        },
+        "bubble": {
+          "distance": 250,
+          "duration": 2,
+          "opacity": 0,
+          "size": 0
+        },
+        "connect": {
+          "distance": 80,
+          "links": {
+            "opacity": 0.5
+          },
+          "radius": 60
+        },
         "grab": {
-          "distance": 140,
-          "line_linked": {
+          "distance": 400,
+          "links": {
             "opacity": 1
           }
         },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
         "push": {
-          "particles_nb": 4
+          "quantity": 4
         },
         "remove": {
-          "particles_nb": 2
+          "quantity": 2
+        },
+        "repulse": {
+          "distance": 400,
+          "duration": 0.4,
+          "speed": 1
+        },
+        "slow": {
+          "factor": 3,
+          "radius": 200
+        },
+        "trail": {
+          "delay": 1,
+          "quantity": 1
         }
       }
     },
-    "retina_detect": true
+    "particles": {
+      "collisions": {
+        "enable": false,
+        "mode": "bounce"
+      },
+      "color": {
+        "value": "#000",
+        "animation": {
+          "enable": false,
+          "speed": 1,
+          "sync": true
+        }
+      },
+      "links": {
+        "blink": false,
+        "color": {
+          "value": "#ffffff"
+        },
+        "consent": false,
+        "distance": 150,
+        "enable": false,
+        "opacity": 0.4,
+        "shadow": {
+          "blur": 5,
+          "color": {
+            "value": "#00ff00"
+          },
+          "enable": false
+        },
+        "triangles": {
+          "enable": false
+        },
+        "width": 1,
+        "warp": false
+      },
+      "move": {
+        "angle": 90,
+        "attract": {
+          "enable": false,
+          "rotate": {
+            "x": 600,
+            "y": 600
+          }
+        },
+        "direction": "none",
+        "enable": true,
+        "noise": {
+          "delay": {
+            "random": {
+              "enable": false,
+              "minimumValue": 0
+            },
+            "value": 0
+          },
+          "enable": false
+        },
+        "outMode": "out",
+        "random": true,
+        "speed": 1,
+        "straight": false,
+        "trail": {
+          "enable": false,
+          "length": 10,
+          "fillColor": {
+            "value": "#000000"
+          }
+        },
+        "vibrate": false,
+        "warp": false
+      },
+      "number": {
+        "density": {
+          "enable": true,
+          "area": 800,
+          "factor": 1000
+        },
+        "limit": 0,
+        "value": 160
+      },
+      "opacity": {
+        "animation": {
+          "enable": true,
+          "minimumValue": 0,
+          "speed": 1,
+          "sync": false
+        },
+        "random": {
+          "enable": true,
+          "minimumValue": 1
+        },
+        "value": 1
+      },
+      "rotate": {
+        "animation": {
+          "enable": false,
+          "speed": 0,
+          "sync": false
+        },
+        "direction": "clockwise",
+        "path": false,
+        "random": false,
+        "value": 0
+      },
+      "shadow": {
+        "blur": 0,
+        "color": {
+          "value": "#000000"
+        },
+        "enable": false,
+        "offset": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "shape": {
+        "options": {
+          "polygon": {
+            "nb_sides": 5
+          },
+          "star": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "",
+            "width": 100,
+            "height": 100
+          },
+          "images": {
+            "src": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "type": "circle"
+      },
+      "size": {
+        "animation": {
+          "destroy": "none",
+          "enable": false,
+          "minimumValue": 0.3,
+          "speed": 4,
+          "startValue": "max",
+          "sync": false
+        },
+        "random": {
+          "enable": true,
+          "minimumValue": 1
+        },
+        "value": 3
+      },
+      "stroke": {
+        "width": 0,
+        "color": {
+          "value": "#000000",
+          "animation": {
+            "enable": false,
+            "speed": 1,
+            "sync": true
+          }
+        }
+      },
+      "twinkle": {
+        "lines": {
+          "enable": false,
+          "frequency": 0.05,
+          "opacity": 1
+        },
+        "particles": {
+          "enable": false,
+          "frequency": 0.05,
+          "opacity": 1
+        }
+      }
+    },
+    "pauseOnBlur": true
   });
