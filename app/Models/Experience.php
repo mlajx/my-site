@@ -4,13 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\Ordered;
 
 class Experience extends Model
 {
-    use HasFactory;
-
-    public function scopeOrdered($query, $dir = 'asc')
-    {
-        return $query->orderBy('order', $dir);
-    }
+    use HasFactory, Ordered;
 }

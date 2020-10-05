@@ -25,13 +25,11 @@
         @apply w-3 h-3 rounded-full bg-primary mr-2 -mt-1;
     }
 
-    .project-popup {
-        top: -.6rem;
-        right: -17rem;
-        @apply hidden w-64 bg-popup text-popup p-3 rounded text-justify;
-
-        @screen md {
-            @apply absolute;
+    @responsive {
+        .project-popup {
+            top: -.6rem;
+            right: -17rem;
+            @apply w-64 bg-popup text-popup p-3 rounded text-justify;
         }
     }
 

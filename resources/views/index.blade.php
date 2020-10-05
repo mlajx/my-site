@@ -79,51 +79,39 @@
             <div class="flex flex-col items-center">
                 <div class="flex flex-col w-2/3">
 
-                    <div class="timeline-item right flex md:ml-auto w-1/2">
-                        <div class="flex flex-row mb-3">
-                            <div class="flex flex-col items-center -ml-1.5">
-                                <div class="circle w-3 h-3 rounded-full bg-white flex-shrink-0 mb-3 opacity-0"></div>
-                                <div class="line bg-white rounded w-1 opacity-0"></div>
+                    @foreach($experience as $exp)
+                        @if($loop->odd)
+                            <div class="timeline-item right flex md:ml-auto w-full md:w-1/2">
+                                <div class="flex flex-row mb-3">
+                                    <div class="flex flex-col items-center -ml-1.5">
+                                        <div class="circle w-3 h-3 rounded-full bg-white flex-shrink-0 mb-3 opacity-0"></div>
+                                        <div class="line bg-white rounded w-1 opacity-0"></div>
+                                    </div>
+                                    <div class="content flex flex-col text-white -mt-2 ml-4">
+                                        <h1 class="md:text-lg font-bold mb-1 opacity-0">{{$exp->title}}</h1>
+                                        <h2 class="text-sm md:text-base mb-1 opacity-0">{{$exp->company}}</h2>
+                                        <h3 class="text-xs text-timeline-date mb-2 opacity-0">{{$exp->date}}</h3>
+                                        <p class="text-sm md:text-base leading-4 md:leading-5 opacity-0">{{$exp->description}}</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content flex flex-col text-white -mt-2 ml-4">
-                                <h1 class="text-lg font-bold mb-1 opacity-0">Autômato</h1>
-                                <h2 class="mb-1 opacity-0">App World</h2>
-                                <h3 class="text-timeline-date text-xs mb-2 opacity-0">2020 - Presente</h3>
-                                <p class="leading-5 opacity-0">Empresa que eu abri com foco em desenvolvimento Web, em Aplicativos Android e iOS e Mídias Sociais.</p>
+                        @else
+                            <div class="timeline-item left flex w-full md:w-1/2">
+                                <div class="flex flex-row md:flex-row-reverse mb-3">
+                                    <div class="flex flex-col items-center -ml-1.5 md:ml-0 md:-mr-1.5">
+                                        <div class="circle w-3 h-3 rounded-full bg-white flex-shrink-0 mb-3 opacity-0"></div>
+                                        <div class="line bg-white rounded w-1 opacity-0"></div>
+                                    </div>
+                                    <div class="content flex flex-col text-white md:items-end md:text-right -mt-2 ml-4 md:ml-0 md:mr-4">
+                                        <h1 class="md:text-lg font-bold mb-1 opacity-0">{{$exp->title}}</h1>
+                                        <h2 class="text-sm md:text-base mb-1 opacity-0">{{$exp->company}}</h2>
+                                        <h3 class="text-xs text-timeline-date mb-2 opacity-0">{{$exp->date}}</h3>
+                                        <p class="text-sm md:text-base leading-4 md:leading-5 opacity-0">{{$exp->description}}</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item left flex w-1/2">
-                        <div class="flex flex-row md:flex-row-reverse mb-3">
-                            <div class="flex flex-col items-center -ml-1.5 md:ml-0 md:-mr-1.5">
-                                <div class="circle w-3 h-3 rounded-full bg-white flex-shrink-0 mb-3 opacity-0"></div>
-                                <div class="line bg-white rounded w-1 opacity-0"></div>
-                            </div>
-                            <div class="content flex flex-col text-white md:items-end md:text-right -mt-2 ml-4 md:ml-0 md:mr-4">
-                                <h1 class="text-lg font-bold mb-1 opacity-0">Autômato</h1>
-                                <h2 class="mb-1 opacity-0">App World</h2>
-                                <h3 class="text-timeline-date text-xs mb-2 opacity-0">2020 - Presente</h3>
-                                <p class="leading-5 opacity-0">Empresa que eu abri com foco em desenvolvimento Web, em Aplicativos Android e iOS e Mídias Sociais.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item right flex md:ml-auto w-1/2">
-                        <div class="flex flex-row mb-3">
-                            <div class="flex flex-col items-center -ml-1.5">
-                                <div class="circle w-3 h-3 rounded-full bg-white flex-shrink-0 mb-3 opacity-0"></div>
-                                <div class="line bg-white rounded w-1 opacity-0"></div>
-                            </div>
-                            <div class="content flex flex-col text-white -mt-2 ml-4">
-                                <h1 class="text-lg font-bold mb-1 opacity-0">Autômato</h1>
-                                <h2 class="mb-1 opacity-0">App World</h2>
-                                <h3 class="text-timeline-date text-xs mb-2 opacity-0">2020 - Presente</h3>
-                                <p class="leading-5 opacity-0">Empresa que eu abri com foco em desenvolvimento Web, em Aplicativos Android e iOS e Mídias Sociais.</p>
-                            </div>
-                        </div>
-                    </div>
-
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -135,33 +123,13 @@
             <ul class="project-list">
                 <li class="project-item mb-4 md:mb-0">
                     <div class="flex flex-col">
-                        <div class="relative">
-                            <a href="#" class="text-base md:text-xl font-bold block relative">Encontrando os 3 palindrômos</a>
-                            <div class="project-popup opacity-0">
-                                <p class="project-popup-text">
-                                    Um algorítmo desenvolvido em JS que encontra 3 número
-                                    palindromos que o resultado deles somados é o
-                                    número inserido pelo usuário.
-                                    Isso vale para números de base 5 até 36.
-                                </p>
-                            </div>
-                        </div>
+                        <a href="#" class="text-base md:text-xl font-bold block relative">Encontrando os 3 palindrômos</a>
                         <div class="underline h-1 w-0 bg-gradient-to-r from-white to-underline"></div>
                     </div>
                 </li>
                 <li class="project-item mb-4 md:mb-0">
                     <div class="flex flex-col">
-                        <div class="relative">
-                            <a href="#" class="text-base md:text-xl font-bold block relative">Jogo da Velha em Vue 3.0</a>
-                            <div class="project-popup opacity-0">
-                                <p class="project-popup-text">
-                                    Um algorítmo desenvolvido em JS que encontra 3 número
-                                    palindromos que o resultado deles somados é o
-                                    número inserido pelo usuário.
-                                    Isso vale para números de base 5 até 36.
-                                </p>
-                            </div>
-                        </div>
+                        <a href="#" class="text-base md:text-xl font-bold block relative">Jogo da Velha em Vue 3.0</a>
                         <div class="underline h-1 w-0 bg-gradient-to-r from-white to-underline"></div>
                     </div>
                 </li>

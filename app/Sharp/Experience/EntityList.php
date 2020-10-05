@@ -60,6 +60,6 @@ class EntityList extends SharpEntityList
     */
     public function getListData(EntityListQueryParams $params)
     {
-        return $this->transform(Experience::all());
+        return $this->transform(Experience::ordered()->get());
     }
 }

@@ -28,7 +28,8 @@ return [
     "entities" => [
         "experience" => [
             "list" => \App\Sharp\Experience\EntityList::class,
-            "form" => \App\Sharp\Experience\Form::class
+            "form" => \App\Sharp\Experience\Form::class,
+            "validator" => \App\Sharp\Experience\Validator::class
         ]
 //        "my_entity" => [
 //            "list" => \App\Sharp\MyEntitySharpList::class,
@@ -70,8 +71,8 @@ return [
 //            ]
 //        ],
        [
-           "label" => "My entity again",
-           "icon" => "fa-page",
+           "label" => "Experiência",
+           "icon" => "fa-history",
            "entity" => "experience"
        ]
     ],

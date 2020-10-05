@@ -657,16 +657,12 @@ video {
 .project-popup {
   top: -.6rem;
   right: -17rem;
-  display: none;
   width: 16rem;
   background-color: var(--color-bg-popup);
   color: var(--color-text-popup);
   padding: 0.75rem;
   border-radius: 0.25rem;
   text-align: justify;
-  @media (min-width: 768px) {
-    position: absolute;
-  }
 }
 
 .project-popup::before {
@@ -8787,6 +8783,17 @@ html {
     }
   }
 
+  .sm\:project-popup {
+    top: -.6rem;
+    right: -17rem;
+    width: 16rem;
+    background-color: var(--color-bg-popup);
+    color: var(--color-text-popup);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: justify;
+  }
+
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -16760,6 +16767,17 @@ html {
     .md\:container {
       max-width: 1280px;
     }
+  }
+
+  .md\:project-popup {
+    top: -.6rem;
+    right: -17rem;
+    width: 16rem;
+    background-color: var(--color-bg-popup);
+    color: var(--color-text-popup);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: justify;
   }
 
   .md\:space-y-0 > :not(template) ~ :not(template) {
@@ -24737,6 +24755,17 @@ html {
     }
   }
 
+  .lg\:project-popup {
+    top: -.6rem;
+    right: -17rem;
+    width: 16rem;
+    background-color: var(--color-bg-popup);
+    color: var(--color-text-popup);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: justify;
+  }
+
   .lg\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -32710,6 +32739,17 @@ html {
     .xl\:container {
       max-width: 1280px;
     }
+  }
+
+  .xl\:project-popup {
+    top: -.6rem;
+    right: -17rem;
+    width: 16rem;
+    background-color: var(--color-bg-popup);
+    color: var(--color-text-popup);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: justify;
   }
 
   .xl\:space-y-0 > :not(template) ~ :not(template) {

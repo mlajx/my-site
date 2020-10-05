@@ -35,8 +35,10 @@ class Form extends SharpForm
     {
         $experience = $id ? Experience::findOrFail($id) : new Experience;
 
-        $order = optional(Experience::ordered('desc')->first())->order ?? 0;
-        $data['order'] = $order + 1;
+        if(!$id) {
+            $order = optional(Experience::ordered('desc')->first())->order ?? 0;
+            $data['order'] = $order + 1;
+        }
 
         $this->save($experience, $data);
     }
