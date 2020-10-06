@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Sharp\Experience;
+namespace App\Sharp\Tecnology;
 
-use App\Models\Experience;
+use App\Models\Tecnology;
 use Code16\Sharp\EntityList\Containers\EntityListDataContainer;
 use Code16\Sharp\EntityList\EntityListQueryParams;
 use Code16\Sharp\EntityList\SharpEntityList;
-use App\Sharp\Experience\Reorder;
+use App\Sharp\Tecnology\Reorder;
 
 class EntityList extends SharpEntityList
 {
@@ -18,14 +18,8 @@ class EntityList extends SharpEntityList
     public function buildListDataContainers()
     {
         $this->addDataContainer(
-            EntityListDataContainer::make('title')
-                ->setLabel('Título')
-        )->addDataContainer(
-            EntityListDataContainer::make('company')
-                ->setLabel('Empresa/Lugar')
-        )->addDataContainer(
-            EntityListDataContainer::make('date')
-                ->setLabel('Data')
+            EntityListDataContainer::make('name')
+                ->setLabel('Nome')
         );
     }
 
@@ -37,9 +31,7 @@ class EntityList extends SharpEntityList
 
     public function buildListLayout()
     {
-        $this->addColumn('title', 4)
-        ->addColumn('company', 4)
-        ->addColumn('date', 4);
+        $this->addColumn('name', 12);
     }
 
     /**
@@ -61,6 +53,6 @@ class EntityList extends SharpEntityList
     */
     public function getListData(EntityListQueryParams $params)
     {
-        return $this->transform(Experience::ordered()->get());
+        return $this->transform(Tecnology::ordered()->get());
     }
 }

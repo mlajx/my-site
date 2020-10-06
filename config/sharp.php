@@ -30,6 +30,15 @@ return [
             "list" => \App\Sharp\Experience\EntityList::class,
             "form" => \App\Sharp\Experience\Form::class,
             "validator" => \App\Sharp\Experience\Validator::class
+        ],
+        "tecnology" => [
+            "list" => \App\Sharp\Tecnology\EntityList::class,
+            "form" => \App\Sharp\Tecnology\Form::class,
+            "validator" => \App\Sharp\Tecnology\Validator::class
+        ],
+        "project" => [
+            "list" => \App\Sharp\Project\EntityList::class,
+            "form" => \App\Sharp\Project\Form::class
         ]
 //        "my_entity" => [
 //            "list" => \App\Sharp\MyEntitySharpList::class,
@@ -74,6 +83,16 @@ return [
            "label" => "Experiência",
            "icon" => "fa-history",
            "entity" => "experience"
+       ],
+       [
+           "label" => "Tecnologias",
+           "icon" => "fa-microchip",
+           "entity" => "tecnology"
+       ],
+       [
+           "label" => "Projetos",
+           "icon" => "fa-folder",
+           "entity" => "project"
        ]
     ],
 
