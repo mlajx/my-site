@@ -13,7 +13,7 @@
     .question-mark {
         right: -1.5rem;
         top: -.6rem;
-        @apply absolute bg-white w-8 h-8 rounded-full text-2xl font-bold flex justify-center items-center;
+        @apply bg-question-mark text-question-mark absolute w-8 h-8 rounded-full text-2xl font-bold flex justify-center items-center;
     }
 
     .project-item {
@@ -22,50 +22,41 @@
 
     .project-item::before {
         content: '';
-        @apply w-3 h-3 rounded-full bg-primary mr-2 -mt-1;
-    }
-
-    @responsive {
-        .project-popup {
-            top: -.6rem;
-            right: -17rem;
-            @apply w-64 bg-popup text-popup p-3 rounded text-justify;
-        }
-    }
-
-    .project-popup::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 15px;
-        left: -8px;
-        width: 20px;
-        height: 20px;
-        border-radius: 4px;
-        transform: rotate(45deg);
-        @apply bg-popup z-0;
-    }
-
-    .project-popup-text {
-        @apply relative z-10;
+        transition-property: 'background-color';
+        @apply bg-some-projects-circle duration-500 ease-in-out w-3 h-3 rounded-full mr-2 -mt-1;
     }
 }
 
 @layer utilities {
+
+    .has-chamfer {
+        @apply relative z-20;
+    }
+
+    .chamfer-bg{
+        @apply w-full h-full left-0 absolute z-0;
+    }
+
+    .chamfer-border {
+        @apply w-full h-full left-0 absolute z-10;
+    }
+
+    .has-border {
+        height: 8px;
+        @apply w-full absolute bottom-0 left-0;
+    }
+
+    .theme-animation-bg {
+        transition-property: background;
+        @apply duration-500 ease-in-out;
+    }
+
+    .theme-animation-color {
+        transition-property: 'color';
+        @apply duration-1000 ease-in-out;
+    }
+
     @responsive {
-        .chamfer-wrapper {
-            @apply relative h-32;
-        }
-
-        .chamfer {
-            @apply w-full h-full absolute top-0 left-0 z-10;
-            clip-path: polygon(0% 0%, 100% 0%, 28% 100%);
-        }
-
-        .chamfer-bg {
-            @apply absolute w-full h-full top-0 left-0 z-0;
-        }
-
         .list {
             @apply pl-4;
         }
@@ -75,7 +66,7 @@
         }
 
         .list-circle {
-            @apply w-2 h-2
+            @apply w-2 h-2;
         }
     }
 }
@@ -103,26 +94,174 @@ html {
 }
 
 :root {
-    --color-bg-primary: #4fd1c5;
-    --color-bg-secondary: #6a79fc;
-    --color-bg-white: #fff;
-    --color-bg-card: #fff;
-    --color-bg-my-experience: #585858;
-    --color-bg-popup: #e9e9e9;
-    --color-bg-social: #1c1c1c;
-    --color-bg-footer: #1c1c1c;
+    --theme-cold-primary: #4FD1C5;
+    --theme-cold-secondary: #6A79FC;
 
-    --color-text-primary: #234e52;
-    --color-text-secondary: #31156b;
-    --color-text-secondary-light: #6a79fc;
-    --color-text-white: #fff;
-    --color-text-name: #fff;
-    --color-text-title: #000;
-    --color-text-content: #000;
-    --color-text-popup: #4f4f4f;
-    --color-text-footer: #4f4f4f;
+    --theme-hot-primary: #FFC077;
+    --theme-hot-secondary: #FF6262;
+
+    --theme-cyberpunk-primary:#FCEE09;
+    --theme-cyberpunk-secondary: #00F0FF;
+}
+
+.cold {
+    --header-bg: var(--theme-cold-primary);
+    --header-primary: #FFFFFF;
+    --header-secondary: #234E52;
+    --header-chamfer-border: #FFFFFF;
+
+    --question-mark-bg: #FFFFFF;
+    --question-mark: #234E52;
+
+    --what-is-dev-bg: #FFFFFF;
+    --what-is-dev: #000000;
+    --what-is-dev-border: none;
+
+    --tech-that-i-use-bg:var(--theme-cold-secondary);
+    --tech-that-i-use: #FFFFFF;
+    --tech-that-i-use-icon-bg: #FFFFFF;
+    --tech-that-i-use-icon: #31156B;
+    --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --tech-that-i-use-border: none;
+
+    --my-experience-bg: #585858;
+    --my-experience: #FFFFFF;
+    --my-experience-timeline-bg: #FFFFFF;
+    --my-experience-date: #969696;
+
+    --some-projects-bg: #FFFFFF;
+    --some-projects: var(--theme-cold-secondary);
+    --some-projects-circle-bg: var(--theme-cold-primary);
+    --some-projects-underline-start: #FFFFFF;
+    --some-projects-underline-end: var(--theme-cold-secondary);
+    --some-projects-border: none;
+
+    --social-network-bg: #1C1C1C;
+    --social-network-primary: #FFFFFF;
+    --social-network-secondary: #FFFFFF;
+
+    --footer-bg: #FFFFFF;
+    --footer: #838383;
+    --footer-hover: #000000;
+}
+
+.hot {
+    --header-bg: var(--theme-hot-primary);
+    --header-primary: #FFFFFF;
+    --header-secondary: #AE6A1A;
+    --header-chamfer-border: #FFFFFF;
+
+    --question-mark-bg: #FFFFFF;
+    --question-mark: #AE6A1A;
+
+    --what-is-dev-bg: #FFFFFF;
+    --what-is-dev: #000000;
+    --what-is-dev-border: none;
+
+    --tech-that-i-use-bg: var(--theme-hot-secondary);
+    --tech-that-i-use: #FFFFFF;
+    --tech-that-i-use-icon-bg: #FFFFFF;
+    --tech-that-i-use-icon: #751616;
+    --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --tech-that-i-use-border: none;
+
+    --my-experience-bg: #585858;
+    --my-experience: #FFFFFF;
+    --my-experience-timeline-bg: #FFFFFF;
+    --my-experience-date: #969696;
+    --my-experience-border: none;
+
+    --some-projects-bg: #FFFFFF;
+    --some-projects: var(--theme-hot-secondary);
+    --some-projects-circle-bg: var(--theme-hot-primary);
+    --some-projects-underline-start: #FFFFFF;
+    --some-projects-underline-end: var(--theme-hot-secondary);
+    --some-projects-border: none;
+
+    --social-network-bg: #1C1C1C;
+    --social-network-primary: #FFFFFF;
+    --social-network-secondary: #FFFFFF;
+
+    --footer-bg: #FFFFFF;
+    --footer: #838383;
+    --footer-hover: #000000;
+}
+
+.cyberpunk {
+    --header-bg: var(--theme-cyberpunk-primary);
+    --header-primary: #000000;
+    --header-secondary: #000000;
+    --header-chamfer-border: var(--theme-cyberpunk-secondary);
+
+    --question-mark-bg: var(--theme-cyberpunk-secondary);
+    --question-mark: #FFFFFF;
+
+    --what-is-dev-bg: #000000;
+    --what-is-dev: #FFFFFF;
+    --what-is-dev-border: var(--theme-cyberpunk-secondary);
+
+    --tech-that-i-use-bg: var(--theme-cyberpunk-primary);
+    --tech-that-i-use: #000000;
+    --tech-that-i-use-icon-bg: #000000;
+    --tech-that-i-use-icon: #000000;
+    --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 240, 255, 0.5), 0 10px 10px -5px rgba(0, 240, 255, 0.2);
+    --tech-that-i-use-border: var(--theme-cyberpunk-secondary);
+
+    --my-experience-bg: #000000;
+    --my-experience: #FFFFFF;
+    --my-experience-timeline-bg:var(--theme-cyberpunk-secondary);
+    --my-experience-date: var(--theme-cyberpunk-primary);
+    --my-experience-border: var(--theme-cyberpunk-secondary);
+
+    --some-projects-bg:var(--theme-cyberpunk-primary);
+    --some-projects: #000000;
+    --some-projects-circle-bg:var(--theme-cyberpunk-secondary);
+    --some-projects-underline-start:var(--theme-cyberpunk-primary);
+    --some-projects-underline-end: var(--theme-cyberpunk-secondary);
+    --some-projects-border: var(--theme-cyberpunk-secondary);
+
+    --social-network-bg: #000000;
+    --social-network-primary: #FFFFFF;
+    --social-network-secondary: var(--theme-cyberpunk-secondary);
+
+    --footer-bg: #000000;
+    --footer: #FFFFFF;
+    --footer-hover: #00F0FF;
+}
+
+.cyberpunk #social-network svg {
+    fill: rgba(0, 0, 0, 0);
+    @apply transition-colors duration-200 ease-in-out;
+}
+
+.cyberpunk #social-network svg:hover {
+    fill: var(--social-network-secondary);
 }
 
 #tsparticles {
     @apply w-full h-full absolute top-0 left-0 z-0;
+}
+
+.buttons-colors button:first-child div div:first-child{
+    background: var(--theme-cold-primary);
+}
+
+.buttons-colors button:first-child div div:nth-child(2){
+    background: var(--theme-cold-secondary);
+}
+
+.buttons-colors button:nth-child(2) div div:first-child{
+    background: var(--theme-hot-primary);
+}
+
+.buttons-colors button:nth-child(2) div div:nth-child(2){
+    background: var(--theme-hot-secondary);
+}
+
+.buttons-colors button:nth-child(3) div div:first-child{
+    background: var(--theme-cyberpunk-primary);
+}
+
+.buttons-colors button:nth-child(3) div div:nth-child(2){
+    background: var(--theme-cyberpunk-secondary);
 }

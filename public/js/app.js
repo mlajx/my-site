@@ -31186,6 +31186,8 @@ __webpack_require__(/*! ./chamfer */ "./resources/js/chamfer.js");
 
 __webpack_require__(/*! ./particles */ "./resources/js/particles.js");
 
+__webpack_require__(/*! ./colors-button */ "./resources/js/colors-button.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -31273,11 +31275,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function resizeChamfer() {
   var chamferOptions = {
     height: 200,
-    widthBase: 1920
+    widthBase: 1920,
+    chamferBorder: 8
   };
-  document.querySelectorAll('.has-chamfer').forEach(function (el) {
-    el.classList.add('relative', 'z-10');
-
+  document.querySelectorAll('.has-chamfer, .chamfer-border').forEach(function (el) {
     if (!el.hasAttribute('data-default-padding-bottom')) {
       el.setAttribute('data-default-padding-bottom', window.getComputedStyle(el).paddingBottom.replace(/\D/g, ''));
     }
@@ -31288,14 +31289,63 @@ function resizeChamfer() {
     var rect = el.getBoundingClientRect();
     var heightPercent = (rect.height - dynamicHeight) * 100 / rect.height;
     el.style.clipPath = "polygon(0% 0%, 100% 0%, 100% ".concat(heightPercent, "%, 28% 100%, 0% ").concat(heightPercent, "%)");
-    var bgElement = el.parentNode.querySelector('.has-chamfer-bg');
 
-    if (bgElement) {
-      bgElement.classList.add('w-full', 'left-0', 'bottom-0', 'absolute', 'z-0', el.getAttribute('data-bg-chamfer'));
-      bgElement.style.height = paddingBottom + dynamicHeight + 'px';
+    if (el.classList.contains('chamfer-border')) {
+      el.style.bottom = -chamferOptions.chamferBorder + 'px';
+    }
+
+    if (el.classList.contains('has-chamfer')) {
+      var hasChamfer = el.hasAttribute('chamfer-bordered');
+
+      if (hasChamfer) {
+        el.style.marginBottom = chamferOptions.chamferBorder + 'px';
+      }
+
+      var bgElement = el.parentNode.querySelector('.chamfer-bg');
+
+      if (bgElement) {
+        bgElement.style.top = hasChamfer ? chamferOptions.chamferBorder + 1 + 'px' : '1px';
+      }
     }
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/colors-button.js":
+/*!***************************************!*\
+  !*** ./resources/js/colors-button.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var coldButton = document.getElementById('cold');
+var hotButton = document.getElementById('hot');
+var cyberpunkButton = document.getElementById('cyberpunk');
+var body = document.body;
+var theme = localStorage.getItem('dev-marcelo-theme');
+
+if (theme) {
+  body.classList.replace('cold', theme);
+}
+
+coldButton.onclick = function () {
+  body.classList.remove('cyberpunk', 'hot');
+  body.classList.add('cold');
+  localStorage.setItem('dev-marcelo-theme', 'cold');
+};
+
+hotButton.onclick = function () {
+  body.classList.remove('cyberpunk', 'cold');
+  body.classList.add('hot');
+  localStorage.setItem('dev-marcelo-theme', 'hot');
+};
+
+cyberpunkButton.onclick = function () {
+  body.classList.remove('hot', 'cold');
+  body.classList.add('cyberpunk');
+  localStorage.setItem('dev-marcelo-theme', 'cyberpunk');
+};
 
 /***/ }),
 

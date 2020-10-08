@@ -7,11 +7,11 @@ function resizeChamfer() {
 
     const chamferOptions = {
         height: 200,
-        widthBase: 1920
+        widthBase: 1920,
+        chamferBorder: 8
     }
 
-    document.querySelectorAll('.has-chamfer').forEach(function (el) {
-        el.classList.add('relative', 'z-10');
+    document.querySelectorAll('.has-chamfer, .chamfer-border').forEach(function (el) {
         if (!el.hasAttribute('data-default-padding-bottom')) {
             el.setAttribute('data-default-padding-bottom', window.getComputedStyle(el).paddingBottom.replace(/\D/g, ''));
         }
@@ -25,10 +25,19 @@ function resizeChamfer() {
 
         el.style.clipPath = `polygon(0% 0%, 100% 0%, 100% ${heightPercent}%, 28% 100%, 0% ${heightPercent}%)`;
 
-        const bgElement = el.parentNode.querySelector('.has-chamfer-bg');
-        if (bgElement) {
-            bgElement.classList.add('w-full', 'left-0', 'bottom-0', 'absolute', 'z-0', el.getAttribute('data-bg-chamfer'));
-            bgElement.style.height = (paddingBottom + dynamicHeight) + 'px';
+        if (el.classList.contains('chamfer-border')) {
+            el.style.bottom = -chamferOptions.chamferBorder + 'px';
+        }
+
+        if (el.classList.contains('has-chamfer')) {
+            const hasChamfer = el.hasAttribute('chamfer-bordered');
+            if (hasChamfer) {
+                el.style.marginBottom = chamferOptions.chamferBorder + 'px';
+            }
+            const bgElement = el.parentNode.querySelector('.chamfer-bg');
+            if (bgElement) {
+                bgElement.style.top = hasChamfer ? (chamferOptions.chamferBorder + 1) + 'px' : '1px';
+            }
         }
     });
 }

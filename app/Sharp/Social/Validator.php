@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Sharp\Tecnology;
+namespace App\Sharp\Social;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -26,8 +26,7 @@ class Validator extends FormRequest
         return [
             'icon' => 'required',
             'name' => 'required',
-            'link' => 'required',
-            'color' => 'required'
+            'link' => 'required'
         ];
     }
 }

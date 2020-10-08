@@ -38,7 +38,13 @@ return [
         ],
         "project" => [
             "list" => \App\Sharp\Project\EntityList::class,
-            "form" => \App\Sharp\Project\Form::class
+            "form" => \App\Sharp\Project\Form::class,
+            "validator" => \App\Sharp\Project\Validator::class
+        ],
+        "social" => [
+            "list" => \App\Sharp\Social\EntityList::class,
+            "form" => \App\Sharp\Social\Form::class,
+            "validator" => \App\Sharp\Social\Validator::class
         ]
 //        "my_entity" => [
 //            "list" => \App\Sharp\MyEntitySharpList::class,
@@ -93,6 +99,11 @@ return [
            "label" => "Projetos",
            "icon" => "fa-folder",
            "entity" => "project"
+       ],
+       [
+           "label" => "Redes Sociais",
+           "icon" => "fa-list",
+           "entity" => "social"
        ]
     ],
 

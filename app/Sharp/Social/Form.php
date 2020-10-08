@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Sharp\Tecnology;
+namespace App\Sharp\Social;
 
-use App\Models\Tecnology;
+use App\Models\Social;
 use Code16\Sharp\Form\Eloquent\Uploads\Transformers\SharpUploadModelFormAttributeTransformer;
 use Code16\Sharp\Form\Eloquent\WithSharpFormEloquentUpdater;
 use Code16\Sharp\Form\Fields\SharpFormTextField;
@@ -26,7 +26,7 @@ class Form extends SharpForm
             "icon",
             new SharpUploadModelFormAttributeTransformer()
         )->transform(
-            Tecnology::with('icon')->findOrFail($id)
+            Social::with('icon')->findOrFail($id)
         );
     }
 
@@ -37,14 +37,14 @@ class Form extends SharpForm
      */
     public function update($id, array $data)
     {
-        $tecnology = $id ? Tecnology::findOrFail($id) : new Tecnology;
+        $social = $id ? Social::findOrFail($id) : new Social;
 
         if(!$id) {
-            $order = optional(Tecnology::ordered('desc')->first())->order ?? 0;
+            $order = optional(Social::ordered('desc')->first())->order ?? 0;
             $data['order'] = $order + 1;
         }
 
-        $this->save($tecnology, $data);
+        $this->save($social, $data);
     }
 
     /**
@@ -52,7 +52,7 @@ class Form extends SharpForm
      */
     public function delete($id)
     {
-        Tecnology::findOrFail($id)->find($id)->delete();
+        Social::findOrFail($id)->find($id)->delete();
     }
 
     /**
@@ -67,16 +67,13 @@ class Form extends SharpForm
                 ->setLabel('Ícone')
                 ->setMaxFileSize(1)
                 ->setFileFilter(['.svg'])
-                ->setStorageBasePath("data/tecnologies")
+                ->setStorageBasePath("data/socials")
         )->addField(
             SharpFormTextField::make('name')
                 ->setLabel('Nome')
         )->addField(
             SharpFormTextField::make('link')
                 ->setLabel('Link')
-        )->addField(
-            SharpFormTextField::make('color')
-                ->setLabel('Cor (Hex)')
         );
     }
 
@@ -87,8 +84,8 @@ class Form extends SharpForm
      */
     public function buildFormLayout()
     {
-        $this->addColumn(6, function (FormLayoutColumn $column) {
-            $column->withFields("icon", "name", "link", "color");
+        $this->addColumn(6, function(FormLayoutColumn $column) {
+            $column->withFields('icon', 'name', 'link');
         });
     }
 }
