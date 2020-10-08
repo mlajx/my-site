@@ -626,7 +626,7 @@ video {
 
 .question-mark {
   right: -1.5rem;
-  top: -.6rem;
+  top: -0.6rem;
   background-color: var(--question-mark-bg);
   color: var(--question-mark);
   position: absolute;
@@ -646,8 +646,8 @@ video {
 }
 
 .project-item::before {
-  content: '';
-  transition-property: 'background-color';
+  content: "";
+  transition-property: "background-color";
   background-color: var(--some-projects-circle-bg);
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -19898,7 +19898,7 @@ video {
   z-index: 20;
 }
 
-.chamfer-bg{
+.chamfer-bg {
   width: 100%;
   height: 100%;
   left: 0;
@@ -19929,22 +19929,9 @@ video {
 }
 
 .theme-animation-color {
-  transition-property: 'color';
+  transition-property: "color";
   transition-duration: 1000ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.list {
-  padding-left: 1rem;
-}
-
-.list-item {
-  position: relative;
-}
-
-.list-circle {
-  width: 0.5rem;
-  height: 0.5rem;
 }
 
 @font-face {
@@ -19978,79 +19965,81 @@ html {
 }
 
 :root {
-  --theme-cold-primary: #4FD1C5;
-  --theme-cold-secondary: #6A79FC;
-  --theme-hot-primary: #FFC077;
-  --theme-hot-secondary: #FF6262;
-  --theme-cyberpunk-primary:#FCEE09;
-  --theme-cyberpunk-secondary: #00F0FF;
+  --theme-cold-primary: #4fd1c5;
+  --theme-cold-secondary: #6a79fc;
+  --theme-hot-primary: #ffc077;
+  --theme-hot-secondary: #ff6262;
+  --theme-cyberpunk-primary: #fcee09;
+  --theme-cyberpunk-secondary: #00f0ff;
 }
 
 .cold {
   --header-bg: var(--theme-cold-primary);
-  --header-primary: #FFFFFF;
-  --header-secondary: #234E52;
-  --header-chamfer-border: #FFFFFF;
-  --question-mark-bg: #FFFFFF;
-  --question-mark: #234E52;
-  --what-is-dev-bg: #FFFFFF;
+  --header-primary: #ffffff;
+  --header-secondary: #234e52;
+  --header-chamfer-border: #ffffff;
+  --question-mark-bg: #ffffff;
+  --question-mark: #234e52;
+  --what-is-dev-bg: #ffffff;
   --what-is-dev: #000000;
   --what-is-dev-border: none;
-  --tech-that-i-use-bg:var(--theme-cold-secondary);
-  --tech-that-i-use: #FFFFFF;
-  --tech-that-i-use-icon-bg: #FFFFFF;
-  --tech-that-i-use-icon: #31156B;
-  --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --tech-that-i-use-bg: var(--theme-cold-secondary);
+  --tech-that-i-use: #ffffff;
+  --tech-that-i-use-icon-bg: #ffffff;
+  --tech-that-i-use-icon: #31156b;
+  --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --tech-that-i-use-border: none;
   --my-experience-bg: #585858;
-  --my-experience: #FFFFFF;
-  --my-experience-timeline-bg: #FFFFFF;
+  --my-experience: #ffffff;
+  --my-experience-timeline-bg: #ffffff;
   --my-experience-date: #969696;
-  --some-projects-bg: #FFFFFF;
+  --some-projects-bg: #ffffff;
   --some-projects: var(--theme-cold-secondary);
   --some-projects-circle-bg: var(--theme-cold-primary);
-  --some-projects-underline-start: #FFFFFF;
+  --some-projects-underline-start: #ffffff;
   --some-projects-underline-end: var(--theme-cold-secondary);
   --some-projects-border: none;
-  --social-network-bg: #1C1C1C;
-  --social-network-primary: #FFFFFF;
-  --social-network-secondary: #FFFFFF;
-  --footer-bg: #FFFFFF;
+  --social-network-bg: #1c1c1c;
+  --social-network-primary: #ffffff;
+  --social-network-secondary: #ffffff;
+  --footer-bg: #ffffff;
   --footer: #838383;
   --footer-hover: #000000;
 }
 
 .hot {
   --header-bg: var(--theme-hot-primary);
-  --header-primary: #FFFFFF;
-  --header-secondary: #AE6A1A;
-  --header-chamfer-border: #FFFFFF;
-  --question-mark-bg: #FFFFFF;
-  --question-mark: #AE6A1A;
-  --what-is-dev-bg: #FFFFFF;
+  --header-primary: #ffffff;
+  --header-secondary: #ae6a1a;
+  --header-chamfer-border: #ffffff;
+  --question-mark-bg: #ffffff;
+  --question-mark: #ae6a1a;
+  --what-is-dev-bg: #ffffff;
   --what-is-dev: #000000;
   --what-is-dev-border: none;
   --tech-that-i-use-bg: var(--theme-hot-secondary);
-  --tech-that-i-use: #FFFFFF;
-  --tech-that-i-use-icon-bg: #FFFFFF;
+  --tech-that-i-use: #ffffff;
+  --tech-that-i-use-icon-bg: #ffffff;
   --tech-that-i-use-icon: #751616;
-  --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --tech-that-i-use-border: none;
   --my-experience-bg: #585858;
-  --my-experience: #FFFFFF;
-  --my-experience-timeline-bg: #FFFFFF;
+  --my-experience: #ffffff;
+  --my-experience-timeline-bg: #ffffff;
   --my-experience-date: #969696;
   --my-experience-border: none;
-  --some-projects-bg: #FFFFFF;
+  --some-projects-bg: #ffffff;
   --some-projects: var(--theme-hot-secondary);
   --some-projects-circle-bg: var(--theme-hot-primary);
-  --some-projects-underline-start: #FFFFFF;
+  --some-projects-underline-start: #ffffff;
   --some-projects-underline-end: var(--theme-hot-secondary);
   --some-projects-border: none;
-  --social-network-bg: #1C1C1C;
-  --social-network-primary: #FFFFFF;
-  --social-network-secondary: #FFFFFF;
-  --footer-bg: #FFFFFF;
+  --social-network-bg: #1c1c1c;
+  --social-network-primary: #ffffff;
+  --social-network-secondary: #ffffff;
+  --footer-bg: #ffffff;
   --footer: #838383;
   --footer-hover: #000000;
 }
@@ -20061,33 +20050,34 @@ html {
   --header-secondary: #000000;
   --header-chamfer-border: var(--theme-cyberpunk-secondary);
   --question-mark-bg: var(--theme-cyberpunk-secondary);
-  --question-mark: #FFFFFF;
+  --question-mark: #ffffff;
   --what-is-dev-bg: #000000;
-  --what-is-dev: #FFFFFF;
+  --what-is-dev: #ffffff;
   --what-is-dev-border: var(--theme-cyberpunk-secondary);
   --tech-that-i-use-bg: var(--theme-cyberpunk-primary);
   --tech-that-i-use: #000000;
   --tech-that-i-use-icon-bg: #000000;
   --tech-that-i-use-icon: #000000;
-  --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 240, 255, 0.5), 0 10px 10px -5px rgba(0, 240, 255, 0.2);
+  --tech-that-i-use-shadow: 0 20px 25px -5px rgba(0, 240, 255, 0.5),
+        0 10px 10px -5px rgba(0, 240, 255, 0.2);
   --tech-that-i-use-border: var(--theme-cyberpunk-secondary);
   --my-experience-bg: #000000;
-  --my-experience: #FFFFFF;
-  --my-experience-timeline-bg:var(--theme-cyberpunk-secondary);
+  --my-experience: #ffffff;
+  --my-experience-timeline-bg: var(--theme-cyberpunk-secondary);
   --my-experience-date: var(--theme-cyberpunk-primary);
   --my-experience-border: var(--theme-cyberpunk-secondary);
-  --some-projects-bg:var(--theme-cyberpunk-primary);
+  --some-projects-bg: var(--theme-cyberpunk-primary);
   --some-projects: #000000;
-  --some-projects-circle-bg:var(--theme-cyberpunk-secondary);
-  --some-projects-underline-start:var(--theme-cyberpunk-primary);
+  --some-projects-circle-bg: var(--theme-cyberpunk-secondary);
+  --some-projects-underline-start: var(--theme-cyberpunk-primary);
   --some-projects-underline-end: var(--theme-cyberpunk-secondary);
   --some-projects-border: var(--theme-cyberpunk-secondary);
   --social-network-bg: #000000;
-  --social-network-primary: #FFFFFF;
+  --social-network-primary: #ffffff;
   --social-network-secondary: var(--theme-cyberpunk-secondary);
   --footer-bg: #000000;
-  --footer: #FFFFFF;
-  --footer-hover: #00F0FF;
+  --footer: #ffffff;
+  --footer-hover: #00f0ff;
 }
 
 .cyberpunk #social-network svg {
@@ -20110,27 +20100,27 @@ html {
   z-index: 0;
 }
 
-.buttons-colors button:first-child div div:first-child{
+.buttons-colors button:first-child div div:first-child {
   background: var(--theme-cold-primary);
 }
 
-.buttons-colors button:first-child div div:nth-child(2){
+.buttons-colors button:first-child div div:nth-child(2) {
   background: var(--theme-cold-secondary);
 }
 
-.buttons-colors button:nth-child(2) div div:first-child{
+.buttons-colors button:nth-child(2) div div:first-child {
   background: var(--theme-hot-primary);
 }
 
-.buttons-colors button:nth-child(2) div div:nth-child(2){
+.buttons-colors button:nth-child(2) div div:nth-child(2) {
   background: var(--theme-hot-secondary);
 }
 
-.buttons-colors button:nth-child(3) div div:first-child{
+.buttons-colors button:nth-child(3) div div:first-child {
   background: var(--theme-cyberpunk-primary);
 }
 
-.buttons-colors button:nth-child(3) div div:nth-child(2){
+.buttons-colors button:nth-child(3) div div:nth-child(2) {
   background: var(--theme-cyberpunk-secondary);
 }
 
@@ -39335,19 +39325,6 @@ html {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
-
-  .sm\:list {
-    padding-left: 1rem;
-  }
-
-  .sm\:list-item {
-    position: relative;
-  }
-
-  .sm\:list-circle {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -58550,19 +58527,6 @@ html {
   .md\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
-  }
-
-  .md\:list {
-    padding-left: 1rem;
-  }
-
-  .md\:list-item {
-    position: relative;
-  }
-
-  .md\:list-circle {
-    width: 0.5rem;
-    height: 0.5rem;
   }
 }
 
@@ -77767,19 +77731,6 @@ html {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
-
-  .lg\:list {
-    padding-left: 1rem;
-  }
-
-  .lg\:list-item {
-    position: relative;
-  }
-
-  .lg\:list-circle {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -96982,18 +96933,5 @@ html {
   .xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
-  }
-
-  .xl\:list {
-    padding-left: 1rem;
-  }
-
-  .xl\:list-item {
-    position: relative;
-  }
-
-  .xl\:list-circle {
-    width: 0.5rem;
-    height: 0.5rem;
   }
 }
