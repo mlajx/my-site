@@ -24,7 +24,8 @@ class Validator extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
+            'title.pt-br' => 'required',
+            'title.en' => 'required',
             'link' => 'required'
         ];
     }

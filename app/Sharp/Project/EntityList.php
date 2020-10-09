@@ -11,10 +11,10 @@ use App\Sharp\Project\Reorder;
 class EntityList extends SharpEntityList
 {
     /**
-    * Build list containers using ->addDataContainer()
-    *
-    * @return void
-    */
+     * Build list containers using ->addDataContainer()
+     *
+     * @return void
+     */
     public function buildListDataContainers()
     {
         $this->addDataContainer(
@@ -24,10 +24,10 @@ class EntityList extends SharpEntityList
     }
 
     /**
-    * Build list layout using ->addColumn()
-    *
-    * @return void
-    */
+     * Build list layout using ->addColumn()
+     *
+     * @return void
+     */
 
     public function buildListLayout()
     {
@@ -35,10 +35,10 @@ class EntityList extends SharpEntityList
     }
 
     /**
-    * Build list config
-    *
-    * @return void
-    */
+     * Build list config
+     *
+     * @return void
+     */
     public function buildListConfig()
     {
         $this->setInstanceIdAttribute('id')
@@ -46,13 +46,19 @@ class EntityList extends SharpEntityList
     }
 
     /**
-    * Retrieve all rows data as array.
-    *
-    * @param EntityListQueryParams $params
-    * @return array
-    */
+     * Retrieve all rows data as array.
+     *
+     * @param EntityListQueryParams $params
+     * @return array
+     */
     public function getListData(EntityListQueryParams $params)
     {
-        return $this->transform(Project::ordered()->get());
+        return $this->setCustomTransformer(
+            'title',
+            function ($title, $project) {
+                return $project->title;
+            }
+        )
+            ->transform(Project::ordered()->get());
     }
 }

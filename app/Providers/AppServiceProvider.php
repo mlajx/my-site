@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app['router']->pushMiddlewareToGroup('sharp_web', \App\Http\Middleware\SharpLanguage::class);
     }
 
     /**
@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind(
+            'Code16\Sharp\Http\LangController',
+            'App\Http\Controllers\LangController'
+        );
     }
 }
