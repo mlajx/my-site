@@ -34,12 +34,14 @@ class Form extends SharpForm
     {
         $project = $id ? Project::findOrFail($id) : new Project;
 
-        if(!$id) {
+        if (!$id) {
             $order = optional(Project::ordered('desc')->first())->order ?? 0;
             $data['order'] = $order + 1;
         }
 
         $this->save($project, $data);
+
+        return $project->id;
     }
 
     /**
@@ -59,6 +61,7 @@ class Form extends SharpForm
     {
         $this->addField(
             SharpFormTextField::make('title')
+                ->setLocalized()
                 ->setLabel('Título')
         )->addField(
             SharpFormTextField::make('link')
@@ -73,8 +76,13 @@ class Form extends SharpForm
      */
     public function buildFormLayout()
     {
-        $this->addColumn(6, function(FormLayoutColumn $column) {
+        $this->addColumn(6, function (FormLayoutColumn $column) {
             $column->withFields('title', 'link');
         });
+    }
+
+    function getDataLocalizations()
+    {
+        return ["pt-br", "en"];
     }
 }

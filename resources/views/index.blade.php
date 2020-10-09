@@ -10,23 +10,23 @@
 <body class="cold">
 
     <div class="fixed top-0 right-0 z-50">
-        <div class="buttons-colors flex mt-1">
-            <button id="cold" class="rounded-full relative border-2 border-white mx-1 focus:outline-none">
+        <div class="buttons-colors flex flex-col mr-1">
+            <button id="cold" class="rounded-full relative border-2 border-white mt-1 focus:outline-none">
                 <div class="flex rounded-full overflow-hidden border-2 border-black">
-                    <div class="w-4 h-8"></div>
-                    <div class="w-4 h-8"></div>
+                    <div class="w-2 h-4"></div>
+                    <div class="w-2 h-4"></div>
                 </div>
             </button>
-            <button id="hot" class="rounded-full relative border-2 border-white mx-1 focus:outline-none">
+            <button id="hot" class="rounded-full relative border-2 border-white mt-1 focus:outline-none">
                 <div class="flex rounded-full overflow-hidden border-2  border-black">
-                    <div class="w-4 h-8"></div>
-                    <div class="w-4 h-8"></div>
+                    <div class="w-2 h-4"></div>
+                    <div class="w-2 h-4"></div>
                 </div>
             </button>
-            <button id="cyberpunk" class="rounded-full relative border-2 border-white mx-1 focus:outline-none">
+            <button id="cyberpunk" class="rounded-full relative border-2 border-white mt-1 focus:outline-none">
                 <div class="flex rounded-full overflow-hidden border-2  border-black">
-                    <div class="w-4 h-8"></div>
-                    <div class="w-4 h-8"></div>
+                    <div class="w-2 h-4"></div>
+                    <div class="w-2 h-4"></div>
                 </div>
             </button>
         </div>
@@ -165,6 +165,8 @@
             Site desenvolvido com
             <a href="https://laravel.com/" target="_blank" class="hover:text-footer-hover transition-colors duration-200">Laravel</a>,
             <a href="https://sharp.code16.fr/docs/" target="_blank" class="hover:text-footer-hover transition-colors duration-200">Sharp</a>,
+            <a href="https://github.com/spatie/laravel-translatable" target="_blank" class="hover:text-footer-hover transition-colors duration-200">Laravel Translatable</a>,
+            <a href="https://github.com/mcamara/laravel-localization" target="_blank" class="hover:text-footer-hover transition-colors duration-200">Laravel Localization</a>,
             <a href="https://tailwindcss.com/" class="hover:text-footer-hover transition-colors duration-200">TailwindCSS</a>,
             <a href="https://animejs.com/" class="hover:text-footer-hover transition-colors duration-200">AnimeJS</a> e
             <a href="https://github.com/matteobruni/tsparticles" class="hover:text-footer-hover transition-colors duration-200">tsParticles</a>

@@ -31285,7 +31285,7 @@ function resizeChamfer() {
 
     var paddingBottom = parseInt(el.getAttribute('data-default-padding-bottom'));
     var dynamicHeight = el.getBoundingClientRect().width * chamferOptions.height / chamferOptions.widthBase;
-    el.style.paddingBottom = paddingBottom + dynamicHeight + 'px';
+    el.style.paddingBottom = paddingBottom + dynamicHeight / 2 + 'px';
     var rect = el.getBoundingClientRect();
     var heightPercent = (rect.height - dynamicHeight) * 100 / rect.height;
     el.style.clipPath = "polygon(0% 0%, 100% 0%, 100% ".concat(heightPercent, "%, 28% 100%, 0% ").concat(heightPercent, "%)");

@@ -18,7 +18,7 @@ function resizeChamfer() {
 
         const paddingBottom = parseInt(el.getAttribute('data-default-padding-bottom'));
         const dynamicHeight = el.getBoundingClientRect().width * chamferOptions.height / chamferOptions.widthBase;
-        el.style.paddingBottom = (paddingBottom + dynamicHeight) + 'px';
+        el.style.paddingBottom = (paddingBottom + dynamicHeight / 2) + 'px';
 
         const rect = el.getBoundingClientRect();
         const heightPercent = (rect.height - dynamicHeight) * 100 / rect.height;
