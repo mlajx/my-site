@@ -7,7 +7,7 @@ use Code16\Sharp\EntityList\Commands\ReorderHandler;
 
 class Reorder implements ReorderHandler
 {
-    public function reorder(array $ids)
+    public function reorder(array $ids): void
     {
         Tecnology::whereIn('id', $ids)->get()->each(function ($tecnology) use ($ids) {
             $tecnology->order = array_search($tecnology->id, $ids) + 1;

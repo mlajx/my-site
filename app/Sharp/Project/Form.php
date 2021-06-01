@@ -47,7 +47,7 @@ class Form extends SharpForm
     /**
      * @param $id
      */
-    public function delete($id)
+    public function delete($id): void
     {
         Project::findOrFail($id)->find($id)->delete();
     }
@@ -57,7 +57,7 @@ class Form extends SharpForm
      *
      * @return void
      */
-    public function buildFormFields()
+    public function buildFormFields(): void
     {
         $this->addField(
             SharpFormTextField::make('title')
@@ -74,14 +74,14 @@ class Form extends SharpForm
      *
      * @return void
      */
-    public function buildFormLayout()
+    public function buildFormLayout(): void
     {
         $this->addColumn(6, function (FormLayoutColumn $column) {
             $column->withFields('title', 'link');
         });
     }
 
-    function getDataLocalizations()
+    public function getDataLocalizations()
     {
         return ["pt-br", "en"];
     }

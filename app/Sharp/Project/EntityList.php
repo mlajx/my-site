@@ -3,10 +3,10 @@
 namespace App\Sharp\Project;
 
 use App\Models\Project;
+use App\Sharp\Project\Reorder;
 use Code16\Sharp\EntityList\Containers\EntityListDataContainer;
 use Code16\Sharp\EntityList\EntityListQueryParams;
 use Code16\Sharp\EntityList\SharpEntityList;
-use App\Sharp\Project\Reorder;
 
 class EntityList extends SharpEntityList
 {
@@ -15,7 +15,7 @@ class EntityList extends SharpEntityList
      *
      * @return void
      */
-    public function buildListDataContainers()
+    public function buildListDataContainers(): void
     {
         $this->addDataContainer(
             EntityListDataContainer::make('title')
@@ -29,7 +29,7 @@ class EntityList extends SharpEntityList
      * @return void
      */
 
-    public function buildListLayout()
+    public function buildListLayout(): void
     {
         $this->addColumn('title', 12);
     }
@@ -39,7 +39,7 @@ class EntityList extends SharpEntityList
      *
      * @return void
      */
-    public function buildListConfig()
+    public function buildListConfig(): void
     {
         $this->setInstanceIdAttribute('id')
             ->setReorderable(new Reorder());

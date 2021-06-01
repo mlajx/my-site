@@ -16,23 +16,23 @@ function onScroll() {
 
 let animations = {
     whatIsDevWebFullStack: {
-        element: document.querySelector('#what-is-dev-web-full-stack'),
+        element: document.querySelector('#what-is-full-stack-web-dev'),
         animated: false,
         timeline: anime.timeline({
             easing: 'easeInOutCubic',
             duration: 750,
             autoplay: false
         }).add({
-            targets: '#what-is-dev-web-full-stack',
+            targets: '#what-is-full-stack-web-dev',
             height: '100%'
         })
             .add({
-                targets: '#what-is-dev-web-full-stack h1',
+                targets: '#what-is-full-stack-web-dev h1',
                 opacity: 1,
                 translateY: [-20, 0]
             })
             .add({
-                targets: '#what-is-dev-web-full-stack p',
+                targets: '#what-is-full-stack-web-dev p',
                 opacity: 1,
                 delay: anime.stagger(600),
                 translateX: function (el, i) {

@@ -5,7 +5,16 @@ module.exports = {
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault: true,
     },
-    purge: [],
+    purge: {
+        content: [
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './resources/**/*.vue',
+        ],
+        options: {
+            safelist: ['fill-current', 'h-10', 'h-20', 'w-auto']
+        }
+    },
     theme: {
         backgroundColor: {
             'header': 'var(--header-bg)',

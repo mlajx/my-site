@@ -4,8 +4,8 @@ namespace App\Sharp\Experience;
 
 use App\Models\Experience;
 use Code16\Sharp\Form\Eloquent\WithSharpFormEloquentUpdater;
-use Code16\Sharp\Form\Fields\SharpFormTextField;
 use Code16\Sharp\Form\Fields\SharpFormTextareaField;
+use Code16\Sharp\Form\Fields\SharpFormTextField;
 use Code16\Sharp\Form\Layout\FormLayoutColumn;
 use Code16\Sharp\Form\SharpForm;
 
@@ -35,7 +35,7 @@ class Form extends SharpForm
     {
         $experience = $id ? Experience::findOrFail($id) : new Experience;
 
-        if(!$id) {
+        if (!$id) {
             $order = optional(Experience::ordered('desc')->first())->order ?? 0;
             $data['order'] = $order + 1;
         }
@@ -46,7 +46,7 @@ class Form extends SharpForm
     /**
      * @param $id
      */
-    public function delete($id)
+    public function delete($id): void
     {
         Experience::findOrFail($id)->find($id)->delete();
     }
@@ -56,7 +56,7 @@ class Form extends SharpForm
      *
      * @return void
      */
-    public function buildFormFields()
+    public function buildFormFields(): void
     {
         $this->addField(
             SharpFormTextField::make('title')
@@ -79,9 +79,9 @@ class Form extends SharpForm
      *
      * @return void
      */
-    public function buildFormLayout()
+    public function buildFormLayout(): void
     {
-        $this->addColumn(6, function(FormLayoutColumn $column) {
+        $this->addColumn(6, function (FormLayoutColumn $column) {
             $column->withFields('title', 'company', 'date', 'description');
         });
     }

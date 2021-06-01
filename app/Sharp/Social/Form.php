@@ -39,7 +39,7 @@ class Form extends SharpForm
     {
         $social = $id ? Social::findOrFail($id) : new Social;
 
-        if(!$id) {
+        if (!$id) {
             $order = optional(Social::ordered('desc')->first())->order ?? 0;
             $data['order'] = $order + 1;
         }
@@ -50,7 +50,7 @@ class Form extends SharpForm
     /**
      * @param $id
      */
-    public function delete($id)
+    public function delete($id): void
     {
         Social::findOrFail($id)->find($id)->delete();
     }
@@ -60,7 +60,7 @@ class Form extends SharpForm
      *
      * @return void
      */
-    public function buildFormFields()
+    public function buildFormFields(): void
     {
         $this->addField(
             SharpFormUploadField::make('icon')
@@ -82,9 +82,9 @@ class Form extends SharpForm
      *
      * @return void
      */
-    public function buildFormLayout()
+    public function buildFormLayout(): void
     {
-        $this->addColumn(6, function(FormLayoutColumn $column) {
+        $this->addColumn(6, function (FormLayoutColumn $column) {
             $column->withFields('icon', 'name', 'link');
         });
     }
